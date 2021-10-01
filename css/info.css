@@ -1,22 +1,24 @@
-.greeting-column {
+/*.greeting-column {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 150px;
-}
-
+}*/
+/*
 .greeting-column .side-column {
   width: 70%;
-}
-
+} style에서 conten를 width100%했을 때 
+*/
 .info-column {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 105px; /* 70*/
   max-height: 100%;
   width: 100%;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .user-column {
@@ -24,7 +26,7 @@
   color: white;
   border-radius: 10px;
   padding: 0 10px;
-  width: 30%;
+  width: 35%;
   margin-right: 10px;
   height: 100%;
   display: flex;
@@ -33,12 +35,12 @@
 }
 
 .subinfo-column {
-  width: 500px;
+  width: 65%;
   height: 100%;
 }
 
 .user-column #greeting {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .subinfo-column #quote,
@@ -54,6 +56,21 @@
   height: 55%;
 }
 
+.subinfo-column #quote span:first-child {
+  font-weight: 600;
+}
+
+.subinfo-column #quote span:last-child {
+  font-size: 15px;
+  opacity: 0.4;
+  color: black;
+  font-weight: 600;
+}
+
 .subinfo-column #weather {
   height: 35%;
+}
+
+.subinfo-column #weather span {
+  font-weight: 600;
 }

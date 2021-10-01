@@ -20,11 +20,11 @@ function greetingByTime(username) {
   const date = new Date();
   const sec = date.getSeconds();
   if (0 <= sec && sec < 20) {
-    greeting.innerText = `Good Morning, ${username}`;
+    greeting.innerHTML = `Good Morning,<br />${username}`;
   } else if (20 <= sec && sec < 40) {
-    greeting.innerText = `Good Afternoon, ${username}`;
+    greeting.innerHTML = `Good Afternoon,<br /> ${username}`;
   } else if (40 <= sec && sec < 60) {
-    greeting.innerText = `Good Evening, ${username}`;
+    greeting.innerHTML = `Good Evening,<br /> ${username}`;
   }
 }
 

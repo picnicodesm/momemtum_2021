@@ -1,0 +1,26 @@
+.clock-column {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.clock-column span {
+  font-size: 160px;
+  color: white;
+}
+
+.clock-column #year,
+.clock-column #second {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 15%;
+  height: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
