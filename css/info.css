@@ -1,0 +1,59 @@
+.greeting-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+}
+
+.greeting-column .side-column {
+  width: 70%;
+}
+
+.info-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  max-height: 100%;
+  width: 100%;
+}
+
+.user-column {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 10px;
+  padding: 0 10px;
+  width: 30%;
+  margin-right: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subinfo-column {
+  width: 500px;
+  height: 100%;
+}
+
+.user-column #greeting {
+  font-size: 25px;
+}
+
+.subinfo-column #quote,
+.subinfo-column #weather {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.subinfo-column #quote {
+  margin-bottom: 10px;
+  height: 55%;
+}
+
+.subinfo-column #weather {
+  height: 35%;
+}

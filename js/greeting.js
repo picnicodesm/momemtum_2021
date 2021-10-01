@@ -9,15 +9,27 @@ const USERNAME_KEY = " username";
 const link = document.querySelector("a");
 
 function onLoginsubmit(event) {
-  event.preventDefault();
+  //event.preventDefault();
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
-  paintGreetings();
+  paintGreetings(username);
+}
+
+function greetingByTime(username) {
+  const date = new Date();
+  const sec = date.getSeconds();
+  if (0 <= sec && sec < 20) {
+    greeting.innerText = `Good Morning, ${username}`;
+  } else if (20 <= sec && sec < 40) {
+    greeting.innerText = `Good Afternoon, ${username}`;
+  } else if (40 <= sec && sec < 60) {
+    greeting.innerText = `Good Evening, ${username}`;
+  }
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
+  greetingByTime(username);
   greeting.classList.remove(HIDDEN_CLASSNAME);
   content.classList.remove(HIDDEN_CLASSNAME);
 }

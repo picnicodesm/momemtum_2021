@@ -1,4 +1,5 @@
 @import "./login.css";
+@import "./info.css";
 
 body {
   height: 100%;
@@ -9,6 +10,16 @@ body {
   background-color: gray;
 }
 
+* {
+  box-sizing: border-box;
+}
 .hidden {
   display: none !important;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
