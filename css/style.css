@@ -1,6 +1,11 @@
 @import "./login.css";
 @import "./info.css";
 @import "./clock.css";
+@import "./to-do.css";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   height: 100%;
@@ -9,11 +14,9 @@ body {
   justify-content: center;
   align-items: center;
   background-color: gray;
+  overflow: scroll;
 }
 
-* {
-  box-sizing: border-box;
-}
 .hidden {
   display: none !important;
 }
@@ -23,4 +26,5 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }

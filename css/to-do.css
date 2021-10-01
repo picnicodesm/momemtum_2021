@@ -1,0 +1,76 @@
+#todo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.todo-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+}
+
+.todo-column span {
+  color: white;
+  font-size: 35px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.todo-column input {
+  font-size: 30px;
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 3px solid white;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+#todo-list {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 100%;
+  max-height: 280px;
+  list-style: none;
+  padding: 10px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#todo-list li {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 50%;
+  padding: 10px 10px 10px 50px;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#todo-list span {
+  font-size: 20px;
+  color: white;
+  width: 70%;
+  overflow-x: scroll;
+}
+
+#todo-list button {
+  position: absolute;
+  right: 50px;
+}
+
+#todo-list::-webkit-scrollbar,
+#todo-list span::-webkit-scrollbar {
+  display: none;
+}
