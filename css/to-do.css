@@ -67,16 +67,22 @@
   overflow-x: scroll;
 }
 
-#todo-list button {
+#todo-list div {
   position: absolute;
   background: none;
   border: none;
   right: 50px;
-}
-
-#todo-list button i {
   color: white;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+#todo-list div i {
+  pointer-events: none;
 }
 
 #todo-list::-webkit-scrollbar,

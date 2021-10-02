@@ -23,7 +23,7 @@ function paintToDo(newTodo, event) {
   li.id = newTodo.id;
   const span = document.createElement("span");
   span.innerText = newTodo.text;
-  const button = document.createElement("button");
+  const button = document.createElement("div");
   button.innerHTML = `<i class="fas fa-times"></i>`;
   button.addEventListener("click", deleteToDo);
   const prelistbgHeight = toDoList.offsetHeight;
@@ -107,7 +107,7 @@ function paintToDoList(newTodo) {
   li.id = newTodo.id;
   const span = document.createElement("span");
   span.innerText = newTodo.text;
-  const button = document.createElement("button");
+  const button = document.createElement("div");
   button.innerHTML = `<i class="fas fa-times"></i>`;
   button.addEventListener("click", deleteToDo);
   li.appendChild(span);
