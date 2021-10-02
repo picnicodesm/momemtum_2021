@@ -24,33 +24,82 @@ function paintToDo(newTodo, event) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.innerText = "❌";
+  button.innerHTML = `<i class="fas fa-times"></i>`;
   button.addEventListener("click", deleteToDo);
+  const prelistbgHeight = toDoList.offsetHeight;
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
+  const firLi = document.querySelector("li:first-child");
+  //const lastLi = document.querySelector("li:last-child");
   const posArr = testf(event);
-  const listX = li.getBoundingClientRect().left + window.pageXOffset;
+  const firListY = firLi.getBoundingClientRect().top + window.pageYOffset;
   const listY = li.getBoundingClientRect().top + window.pageYOffset;
-  console.log(posArr[1], listY);
-  li.style.nth -
-    child(2).animate(
-      [
-        {
-          transform: `translateY(${posArr[1] - listY}px)`,
-          position: "absolute",
-        },
-        {
-          transform: "none",
-          position: "absolute",
-        },
-      ],
+  //const constNum = posArr[1] - firListY;
+  const constNum = 77;
+  const listWidth = li.offsetWidth;
+  const listbgHeight = toDoList.offsetHeight;
+  console.log(
+    posArr[1],
+    listY,
+    listY - (posArr[1] + 65),
+    listbgHeight,
+    prelistbgHeight
+  );
+  toDoList.animate(
+    [
+      { height: `${prelistbgHeight}px`, offset: 0 },
       {
-        easing: "linear",
-        delay: 300,
-        duration: 1000,
-      }
-    );
+        height: `${listbgHeight}px`,
+        offset: 0.6,
+      },
+      {
+        height: `${listbgHeight}px`,
+        offset: 1,
+      },
+    ],
+    {
+      easing: "ease-in-out",
+      duration: 1000,
+    }
+  );
+
+  li.animate(
+    [
+      {
+        transform: `translateY(-${constNum}px)`,
+        width: `${listWidth}px`,
+        position: "absolute",
+        offset: 0,
+      },
+      {
+        width: `${listWidth}px`,
+        transform: `translateY(-${constNum}px)`,
+        position: "absolute",
+        boxShadow:
+          "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+        // zIndex: 2,
+        offset: 0.2,
+      },
+      {
+        width: `${listWidth}px`,
+        position: "absolute",
+        boxShadow:
+          "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+        offset: 0.8,
+      },
+      {
+        width: `${listWidth}px`,
+        transform: `translateY(${listY - (posArr[1] + constNum)}px)`,
+        position: "absolute",
+        offset: 1,
+      },
+    ],
+    {
+      easing: "ease-in-out",
+      duration: 1000,
+    }
+  );
 }
 
 function paintToDoList(newTodo) {
@@ -59,7 +108,7 @@ function paintToDoList(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.innerText = "❌";
+  button.innerHTML = `<i class="fas fa-times"></i>`;
   button.addEventListener("click", deleteToDo);
   li.appendChild(span);
   li.appendChild(button);

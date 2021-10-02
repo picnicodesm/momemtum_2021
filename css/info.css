@@ -57,6 +57,8 @@
 
 .subinfo-column #quote span:first-child {
   font-weight: 600;
+  display: block;
+  margin-bottom: 7px;
 }
 
 .subinfo-column #quote span:last-child {

@@ -5,6 +5,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  padding: 10px 0;
 }
 
 .todo-column {
@@ -45,6 +46,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 15px 0;
 }
 
 #todo-list li {
@@ -52,7 +54,7 @@
   border-radius: 10px;
   width: 50%;
   padding: 10px 10px 10px 50px;
-  margin-bottom: 3px;
+  margin: 3px 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -67,7 +69,14 @@
 
 #todo-list button {
   position: absolute;
+  background: none;
+  border: none;
   right: 50px;
+}
+
+#todo-list button i {
+  color: white;
+  font-size: 20px;
 }
 
 #todo-list::-webkit-scrollbar,
