@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--widget-background-color);
+  backdrop-filter: blur(5px);
   border-radius: 10px;
   padding: 10px 0;
 }
@@ -36,7 +37,8 @@
 }
 
 #todo-list {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--widget-background-color);
+  backdrop-filter: blur(5px);
   border-radius: 10px;
   width: 100%;
   max-height: 280px;
@@ -49,8 +51,16 @@
   margin: 15px 0;
 }
 
+#todo-list::-webkit-scrollbar {
+  width: 5px;
+}
+#todo-list::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
 #todo-list li {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--subWidget-background-color);
   border-radius: 10px;
   width: 50%;
   padding: 10px 10px 10px 50px;
@@ -58,6 +68,13 @@
   display: flex;
   align-items: center;
   position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+#todo-list li:hover {
+  transform: scale(1.1);
+  background-color: black;
+  transition: all 0.2s ease-in-out;
 }
 
 #todo-list span {
@@ -65,6 +82,10 @@
   color: white;
   width: 70%;
   overflow-x: scroll;
+}
+
+#todo-list span::-webkit-scrollbar {
+  display: none;
 }
 
 #todo-list div {
@@ -83,9 +104,4 @@
 
 #todo-list div i {
   pointer-events: none;
-}
-
-#todo-list::-webkit-scrollbar,
-#todo-list span::-webkit-scrollbar {
-  display: none;
 }

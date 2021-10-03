@@ -5,7 +5,24 @@ const toDoListCol = document.querySelector("#todo-list li");
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
-  li.remove();
+
+  li.animate(
+    [
+      { transform: "none" },
+      {
+        transform: "translateX(-1000px)",
+      },
+    ],
+    {
+      easing: "ease-in-out",
+      duration: 300,
+    }
+  );
+
+  setTimeout(() => {
+    li.remove();
+  }, 300);
+
   toDos = toDos.filter((toDo) => toDo.id != parseInt(li.id));
   saveToDos();
 }
@@ -48,7 +65,7 @@ function paintToDo(newTodo, event) {
   );
   toDoList.animate(
     [
-      { height: `${prelistbgHeight}px`, offset: 0 },
+      { height: `${prelistbgHeight}px`, offset: 0, zIndex: 90 },
       {
         height: `${listbgHeight}px`,
         offset: 0.6,
@@ -134,7 +151,19 @@ function testf(event) {
   return [x, y];
 }
 
-toDoForm.addEventListener("change", handleToDoSubmit);
+function checkEnter(event) {
+  const keyCode = event.keyCode;
+  console.log(keyCode);
+
+  if (keyCode === 13) {
+    handleToDoSubmit(event);
+  } else {
+    return;
+  }
+}
+
+//toDoForm.addEventListener("keydown", handleToDoSubmit);
+toDoForm.addEventListener("keydown", checkEnter);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 

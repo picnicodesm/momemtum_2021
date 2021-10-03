@@ -7,17 +7,18 @@ const images = [
   "bg6.jpg",
   "bg7.jpg",
   "bg8.jpg",
-  "bg9.jpg",
 ];
 
 const choseImage = images[Math.floor(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
 
-bgImage.src = `img/${choseImage}`;
+bgImage.src = `img//background-img/${choseImage}`;
 
 //document.body.appendChild(bgImage);
 
 const body = document.querySelector("body");
 body.style.backgroundImage = `url("img/${choseImage}")`;
 body.style.backgroundSize = "cover";
+body.style.backgroundPosition = "center center";
+body.style.backgroundRepeat = "no-repeat";

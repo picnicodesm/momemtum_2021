@@ -1,15 +1,3 @@
-/*.greeting-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 150px;
-}*/
-/*
-.greeting-column .side-column {
-  width: 70%;
-} style에서 conten를 width100%했을 때 
-*/
 .info-column {
   display: flex;
   justify-content: center;
@@ -21,7 +9,8 @@
 }
 
 .user-column {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--widget-background-color);
+  backdrop-filter: blur(5px);
   color: white;
   border-radius: 10px;
   padding: 0 10px;
@@ -44,7 +33,8 @@
 
 .subinfo-column #quote,
 .subinfo-column #weather {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--widget-background-color);
+  backdrop-filter: blur(5px);
   color: white;
   border-radius: 10px;
   padding: 10px 20px;
@@ -53,6 +43,8 @@
 .subinfo-column #quote {
   margin-bottom: 10px;
   height: 55%;
+  font-family: "Georgia";
+  font-style: italic;
 }
 
 .subinfo-column #quote span:first-child {
@@ -64,7 +56,7 @@
 .subinfo-column #quote span:last-child {
   font-size: 15px;
   opacity: 0.4;
-  color: black;
+  color: white;
   font-weight: 600;
 }
 

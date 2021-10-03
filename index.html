@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap"
+      rel="stylesheet"
+    />
     <title>Momentum</title>
   </head>
 
   <body>
     <form class="hidden" id="login-form">
       <div class="icon">
-        <i class="fas fa-home"></i>
+        <i class="fas fa-leaf"></i>
       </div>
       <span>Hello, what's your name?</span>
       <input required maxlength="9" type="text" />
@@ -44,6 +50,22 @@
         <div id="second"></div>
       </div>
 
+      <div class="anniversary-col">
+        <span>Anniversary D-DAY</span>
+        <div class="dDay">
+          <span>D - 30</span>
+        </div>
+        <ul class="dayList">
+          <li class="newYear">새해 (1/1)</li>
+          <li class="childrensDay">어린이날 (5/5)</li>
+          <li class="patentsDay">어버이날 (5/8)</li>
+          <li class="teachersDay">스승의날 (5/15)</li>
+          <li class="memorialDay">현충일 (6/6)</li>
+          <li class="nfDayOfKorea">개천절 (10/3)</li>
+          <li class="xMax">크리스마스 (12/25)</li>
+        </ul>
+      </div>
+
       <form id="todo-form">
         <div class="todo-column">
           <span>What is your To-do for today?</span>
@@ -60,6 +82,7 @@
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/anniversary.js"></script>
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="annoymous"
