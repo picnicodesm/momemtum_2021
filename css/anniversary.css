@@ -36,7 +36,7 @@
 
 .anniversary-col .dDay span {
   font-family: "Ephesis", cursive;
-  font-size: 60px;
+  font-size: 55px;
 }
 
 .anniversary-col .dayList {
@@ -57,7 +57,7 @@
 }
 
 .anniversary-col .dayList li {
-  background-color: seagreen;
+  background-color: rgba(46, 139, 87, 0.4);
   width: 90%;
   height: 20%;
   padding: 10px 10px 10px 20px;
