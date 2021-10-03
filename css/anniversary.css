@@ -43,7 +43,7 @@
   border: 1px solid white;
   border-radius: 10px;
   width: 80%;
-  height: 50%;
+  height: 53%;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -64,4 +64,10 @@
   border-radius: 10px;
   text-align: center;
   margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.anniversary-col .dayList li:hover {
+  background-color: rgba(46, 139, 87, 0.8);
+  transition: all 0.3s ease-in-out;
 }

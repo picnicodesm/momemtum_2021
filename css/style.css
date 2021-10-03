@@ -6,6 +6,7 @@
 @import "./content.css";
 @import "./variable.css";
 @import "./anniversary.css";
+@import "./sub-widget.css";
 
 * {
   box-sizing: border-box;

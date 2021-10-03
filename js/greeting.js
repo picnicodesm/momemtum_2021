@@ -8,8 +8,7 @@ const USERNAME_KEY = " username";
 
 const link = document.querySelector("a");
 
-function onLoginsubmit(event) {
-  //event.preventDefault();
+function onLoginsubmit() {
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
@@ -18,13 +17,17 @@ function onLoginsubmit(event) {
 
 function greetingByTime(username) {
   const date = new Date();
-  const sec = date.getSeconds();
-  if (0 <= sec && sec < 20) {
-    greeting.innerHTML = `Good Morning,<br />${username}`;
-  } else if (20 <= sec && sec < 40) {
+  const hour = date.getHours();
+  if (0 <= hour && hour < 06) {
+    greeting.innerHTML = `Happy Dawn :)<br />${username}`;
+  } else if (06 <= hour && hour < 13) {
+    greeting.innerHTML = `Good Morning,<br /> ${username}`;
+  } else if (13 <= hour && hour < 18) {
     greeting.innerHTML = `Good Afternoon,<br /> ${username}`;
-  } else if (40 <= sec && sec < 60) {
+  } else if (18 <= hour && hour < 22) {
     greeting.innerHTML = `Good Evening,<br /> ${username}`;
+  } else if (22 <= hour && hour < 24) {
+    greeting.innerHTML = `Good Night,<br /> ${username}`;
   }
 }
 

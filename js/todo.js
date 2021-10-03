@@ -47,12 +47,8 @@ function paintToDo(newTodo, event) {
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
-  const firLi = document.querySelector("li:first-child");
-  //const lastLi = document.querySelector("li:last-child");
   const posArr = testf(event);
-  const firListY = firLi.getBoundingClientRect().top + window.pageYOffset;
   const listY = li.getBoundingClientRect().top + window.pageYOffset;
-  //const constNum = posArr[1] - firListY;
   const constNum = 77;
   const listWidth = li.offsetWidth;
   const listbgHeight = toDoList.offsetHeight;
@@ -95,7 +91,6 @@ function paintToDo(newTodo, event) {
         position: "absolute",
         boxShadow:
           "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
-        // zIndex: 2,
         offset: 0.2,
       },
       {
@@ -162,7 +157,6 @@ function checkEnter(event) {
   }
 }
 
-//toDoForm.addEventListener("keydown", handleToDoSubmit);
 toDoForm.addEventListener("keydown", checkEnter);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);

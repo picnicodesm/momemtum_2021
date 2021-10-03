@@ -15,8 +15,6 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `img//background-img/${choseImage}`;
 
-//document.body.appendChild(bgImage);
-
 const body = document.querySelector("body");
 body.style.backgroundImage = `url("img/${choseImage}")`;
 body.style.backgroundSize = "cover";
